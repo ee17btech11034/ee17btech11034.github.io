@@ -1,0 +1,35 @@
+h1{
+    margin:20px 0px;
+    text-align: center;
+}
+.container{
+    height: 500px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.formClass{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inputClass{
+    width: 30%;
+    padding: 4px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    margin: 5px;
+    /* jab me fill kr raha hu to outline aa rahi hai use hatane ke liye */
+    outline: none;
+}
+
+.btn{
+    margin: 5px 0px;
+    padding: 3px;
+    border: 1.5px solid black;
+    cursor: pointer;
+    border-radius: 5px;
+}

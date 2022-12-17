@@ -1,0 +1,69 @@
+#introSection{
+    color: aliceblue;
+    height: 500px;
+    background: url('three.jpg') left top no-repeat, url('natyam.jpg') right top no-repeat;
+    background-position: absolute;
+    background-size: 50% 100%;   /*dono image row me 50% and colum me 100% use krega  */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+#introSection div.small{
+    font-size: 18px;
+}
+#MissionSection {
+    background-color: rgba(123, 255, 0, 0.301);
+    height: 300px;
+    text-align: center;
+    color: red;
+    padding: 5px;
+}
+.card{
+    background-color: antiquewhite;
+    /* background-color: white; */
+    color: black;
+    width: 25%;
+    height: 60%;
+    border: 3px solid black;
+    margin: 20px 20px;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 15px;
+}
+.card:hover{
+    background-color: lightblue;
+}
+.card-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-img{
+    height: 100px;
+    padding: 3px 5px;
+    margin: 10px 10px;
+
+}
+.card-img img{
+    height: inherit;      /* iska matlab hai ki .card-img class me jo height hai wahi de do img ko.  */
+}
+#sponsorSection {
+    /* background: url('/static/three.jpg') left top no-repeat, url('/static/single.jpg') right bottom no-repeat, url('/static/natyam.jpg') right top no-repeat, url('/static/two.jpg') left bottom no-repeat; */
+    background-color: rgba(255, 0, 0, 0.5);
+    height: 240px;
+    text-align: center;
+    color: white;
+    padding: 5px;
+}
+.sponsor-img{
+    height: 200px;
+    max-width: 1000px;
+    margin: auto;
+}
+.img1{
+    height: 120px;
+    padding: 10px;
+    margin: 30px 20px;
+}
