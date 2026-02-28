@@ -1,5 +1,11 @@
-# My-Websites: https://ee17btech11034.github.io/ 
-I added some photos and some company photos. 
-I just found them and i used them. Not my intension to hurt any company reputation or any personnel feelings. 
-Please forgive me if i hurt any. 
-Thank you
+# Portfolio
+
+Welcome to my cosmic exploration project. This portfolio is an interactive journey through space, guided by a free-roaming Minion.
+
+### This portfolio has many parts like:
+* **Games:** Interactive challenges hidden within the stars.
+* **About Me:** My journey as a developer and creator.
+* **Others:** in progress.
+
+### Future Updates:
+Other parts we will add with time. We are constantly expanding the universe, adding new planets, and more interactive features for our Minion guide.

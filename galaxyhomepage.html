@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Minion Guide</title>
+    <link rel="stylesheet" href="galaxyhomepage.css">
+</head>
+<body>
+
+    <div class="viewport" id="main-viewport">
+        <canvas id="starfield"></canvas>
+        
+        <div id="galaxy-container" class="zoom-layer">
+            <div class="galaxy-core"></div>
+            <canvas id="galaxy-spiral"></canvas>
+        </div>
+
+        <div id="solar-system" class="zoom-layer">
+            <div class="sun"></div>
+            <div class="orbit"><div class="planet earth"></div></div>
+        </div>
+
+        <div class="toy-container" id="minion-toy">
+            <div class="speech-bubble">Catch me!</div>
+
+            <div class="arm left-arm"><div class="hand"></div></div>
+            <div class="arm right-arm"><div class="hand"></div></div>
+            
+            <div class="minion-body">
+                <div class="goggle-strap"></div>
+                <div class="goggle-frame"><div class="eye"><div class="pupil"></div></div></div>
+                <div class="overalls"><div class="pocket"></div></div>
+            </div>
+
+            <div class="leg left-leg"><div class="foot"></div></div>
+            <div class="leg right-leg"><div class="foot"></div></div>
+
+            <div class="cards-fan" id="cards-fan">
+                <a href="aboutme.html" class="nav-card">About Raja</a>
+            </div>
+        </div>
+
+        <div class="ui">
+            <h1 id="stage-label">Deep Space</h1>
+            <!-- <p>Click space to Zoom | Hover for a surprise</p> -->
+            <p>Wanted to add 3D Milky Way -> Galaxy -> Solar System -> Earth -> india. But with static HTMl we can not achieve this in time. Changed to this.</p>
+        </div>
+    </div>
+
+    <script src="galaxyhomepage.js"></script>
+</body>
+</html>
