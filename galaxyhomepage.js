@@ -14,6 +14,11 @@ function init() {
     starCanvas.height = galaxyCanvas.height = window.innerHeight;
     drawStars();
     drawGalaxy();
+    const startX = Math.random() * (window.innerWidth - 100) + 50;
+    const startY = Math.random() * (window.innerHeight - 150) + 75;
+    minion.style.left = `${startX}px`;
+    minion.style.top = `${startY}px`;
+    minion.style.opacity = "1"; // Ensure he is visible
     startRoaming();
 }
 
@@ -45,17 +50,25 @@ function drawGalaxy() {
 
 // RANDOM ROAMING: Moves minion every 4 seconds
 function startRoaming() {
-    roamInterval = setInterval(() => {
-        // Only roam if cards aren't open
+    // 1. Define the move logic in a reusable function
+    const move = () => {
         if (!document.getElementById('cards-fan').classList.contains('active')) {
             const randomX = Math.random() * (window.innerWidth - 100) + 50;
             const randomY = Math.random() * (window.innerHeight - 150) + 75;
             minion.style.left = `${randomX}px`;
             minion.style.top = `${randomY}px`;
         }
-    }, 4000);
-}
+    };
 
+    // 2. Clear any existing interval to prevent speed-up bugs on resize
+    clearInterval(roamInterval);
+
+    // 3. START IMMEDIATELY (no 4s wait)
+    move(); 
+
+    // 4. Then continue every 4 seconds
+    roamInterval = setInterval(move, 2000);
+}
 // MOUSE INTERACTION: Eye tracking + 3s Follow
 window.addEventListener('mousemove', (e) => {
     clearTimeout(idleTimer);

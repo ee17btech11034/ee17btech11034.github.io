@@ -1,0 +1,206 @@
+.img-and-links-section{
+    display: flex;
+    align-items: center; /* Aligns icons vertically with center of image */
+    gap: 20px;
+    margin-bottom: 1rem;
+    
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 24px;
+    object-fit: cover; /* use this full cover of 120*120px */
+    margin-bottom: 1.5rem; /* space between 2 lines 1rem = 16px (generally)*/
+    border: 1.8px solid #30363d;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.social-links {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates a 2x2 grid of icons */
+    gap: 22px;
+}
+
+.social-links a:hover {
+    color: #58a6ff;
+    transform: translateY(-2px);
+}
+#award-link{
+    text-decoration: none;
+    cursor: pointer;
+}
+/* #award-link:hover{
+    transform: translateY(-5px);
+    scale: calc(10%);
+} */
+
+.social-links a, .phone-tooltip {
+    color: #8b949e;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+
+/* Tooltip Reveal */
+.phone-tooltip { position: relative; }
+.tooltip-box {
+    visibility: hidden;
+    position: absolute;
+    bottom: 140%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #21262d;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    border: 1px solid #30363d;
+    white-space: nowrap;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.phone-tooltip:hover .tooltip-box {
+    visibility: visible;
+    opacity: 1;
+}
+
+.phone-tooltip:hover{
+    color: #58a6ff;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 800px) {
+    .img-and-links-section{
+        justify-content:space-evenly
+    }
+    .social-links{
+        column-gap:35px;
+    }
+}
+
+/*This will things about Name and intro-section and award*/
+.name-row {
+    margin-bottom: 1.3rem;
+}
+
+.name-row h1 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+    margin-left: 20px;
+}
+
+.first-name { 
+    /* color: #e7cdcd;  */
+    /* color: #f8fafc;  */
+    color: #e9d5ff;
+    font-weight: 400;
+    animation: colorchanges 3s infinite alternate;
+    --start-color: #f8fafc;
+    /* --mid-color: red; */
+    --mid-color: #e7cdcd;
+    --end-color: #e9d5ff;
+}
+
+.last-name { 
+    /* color: #a71ee9;  */
+    color: #fb7185;
+    /* color: #d946ef; */
+    font-weight: 800;
+    text-shadow: 0 0 15px rgba(168, 85, 247, 0.3); /* Subtle glow */
+    animation: colorchanges 3s infinite alternate;
+    --start-color: #d946ef;
+    --mid-color: #a71ee9;
+    --end-color: #fb7185;
+}
+
+.designation-badge {
+    display: inline-block;
+    background: rgba(88, 166, 255, 0.1);
+    /* color: #c61d4f; */
+    color: #c084fc;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border: 1px solid rgba(88, 166, 255, 0.2);
+    margin-left:40px;
+}
+
+/* Awards */
+.skill-heading {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: #8b949e;
+    text-transform: uppercase;
+    margin: 2.5rem 0 1rem;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 5px;
+}
+
+.award-items { list-style: none; }
+.award-items li { font-size: 0.9rem; margin-bottom: 10px; }
+
+@keyframes colorchanges {
+    0% {
+        color: var(--start-color, rgb(255, 255, 255, 0));
+    }
+    50% {
+        color: var(--mid-color, white);
+    }
+    100% {
+        color: var(--end-color, white);
+    }
+}
+
+@media (max-width: 800px) {
+    .name-row{
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+    }
+}
+
+/* skills.css */
+.skills-section {
+    margin-top: 1rem;
+}
+
+.skill-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #c9d1d9;
+    margin: 1.2rem 0 0.6rem;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tags span {
+    background: #21262d;
+    border: 1px solid #30363d;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    color: #8b949e;
+    transition: 0.2s;
+}
+
+/* Highlight for core skills */
+.skill-tags span.core {
+    border-color: rgba(88, 166, 255, 0.4);
+    color: #58a6ff;
+    background: rgba(88, 166, 255, 0.05);
+}
+
+.skill-tags span:hover {
+    background: #30363d;
+    color: #ffffff;
+    border-color: #58a6ff;
+}
